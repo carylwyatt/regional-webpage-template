@@ -187,4 +187,27 @@
     
   });
   
+  //REFACTOR PROJECT
+  //OUTPUT {name: 'Anatomy & Phys', url: 'http://-----', subject: ['Health', 'Science']}
+  
+  $.getJSON('http://lgapi.libapps.com/1.1/guides/?site_id=103&key=83d416dc1ba38e91c12fee5de29a4527&subject_ids=129750,129756,129761,129759,129758,129753,129754,129752,119567,129762,129750,129751,129760,33505,129757,129755&expand=subjects&tag_names[]=Central%20Indiana%20Region&status[]=1&sort_by=name', function(data) {
+
+	var guideList = [];
+
+	_.forEach(data, function(guide) {
+	
+	var thisGuide = new Object();
+	thisGuide.name = guide.name;
+	thisGuide.url = guide.url;
+  thisGuide.subject = _.flatMap(guide.subjects, 'name');  
+	guideList.push(thisGuide);
+
+	});
+	
+
+console.log(guideList);
+    
+
+});
+  
 </script>
