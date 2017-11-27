@@ -5,7 +5,7 @@ today's hours "widget"
 created by caryl wyatt, caryl.e.wyatt@gmail.com | carylwyatt.github.io
 
 //======= notes ========
-LAST UPDATED: 10.24.17 to fix the if/else if/else statement-- needed extra paramters to weed out any events that had start/end times but not description
+LAST UPDATED: 11.27.17 to fix the if/else if/else statement-- needed extra paramters to weed out any events that had start/end times but not description
 
  - 09.07.17 to add minutes to the time format in line 68
  - requires lodash.js and moments.js
@@ -76,7 +76,7 @@ const displaySchedule = (data) => {
               
             //if there is no description in the event, skip it
               //this usually happens if we're on break, dionna will add an event called "spring break" but doesn't include description
-            } else if(library.start.dateTime && library.end.dateTime && !library.description) {
+            } else if((library.start.dateTime && library.end.dateTime && !library.description) || !library.description) {
               
               return;
             
