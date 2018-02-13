@@ -1,7 +1,7 @@
 /*
 ============ Website Style 2.2 MOBILE FIRST =======================================
 Created by: Caryl Wyatt, Librarian, Ivy Tech Community College, Lawrence Library, Indianapolis
-Last updated: 02.13.2018
+Last updated: 02.13.2018  version with mobile fixes before I added FAQ stuff
 ===============================================================================================
 
   First things first
@@ -14,6 +14,16 @@ Last updated: 02.13.2018
   LibGuides use Bootstrap 3: http://getbootstrap.com/components/
   I use flexbox to "fix" lots of mobile stuff: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
+  General notes on style
+  ====================================================
+  Fonts: 'Open Sans' for body font
+  Colors:
+      Ivy Tech Green: #086c54
+      Medium Green: #41ad49
+      Lime: #8dc63f
+      Link green: #5Fa300
+      Link hover: #487c00
+*/
 
 /* ---- Base Styles ---- */
 
@@ -503,25 +513,6 @@ input#ebscohostsearchtext {
     padding: 10px 0;
   }
   
-/* ===== FAQs ===== */
-
-#s-lg-box-18118830 {
-margin-bottom:0;
-}
-#s-la-widget-7593 {
-border:none;
-padding:0;
-margin: 20px 0;
-font-family:'Open Sans', Arial, sans-serif;
-}
-#s-la-content-search-query-7593 .input-group {
-    font-size: 1em;
-}
-#s-la-widget-7593 .btn-primary {
- background-color: #006648!important; {
-border-color:#006648;
-}
-
 /* === STAFF PAGE === */
 
 .indy_staff {
@@ -579,7 +570,7 @@ border-color:#006648;
     border: 2.5px solid #086c54;
     height:2.5em;
     max-width:100%;
-    margin-right: 5px;
+    margin-right:5px;
   }
   
   #onlysearchbutton.btn {
@@ -630,41 +621,6 @@ border-color:#006648;
   #home-tiles a {
     margin: 0 10px;
   }
-  /*
-
-  #faq-topics, #contact-us {
-  display:flex;
-  flex-flow:row;
-  }
-  #faq-topics a, #contact-us a {
-  display:flex;
-  flex-flow:column;
-  flex: 1 1 100%;
-  
-  margin: 0 10px;
-  
-  }
-  #faq-topics a:hover, #contact-us a:hover {
-      background: #f5f5f5;
-      text-decoration: none;
-  }
-  .tile-icon {
-      font-size: 4em;
-      color:#777;
-      text-align: center;
-  }
-  .tile-title {
-      text-align: center;
-      font-size: 1.15em;
-      color:#006648;
-  }
-  .tile-stuff {
-  margin: 5px 20px;
-  text-align:center;
-  font-size:.7em;
-  font-weight:400;
-  } */
-  
 }
 
 
@@ -714,8 +670,7 @@ border-color:#006648;
     font-weight:400;
     letter-spacing:normal;
   }
-  
-  
+
   nav ul li {
     text-align:left;
     width:70%;
@@ -724,7 +679,7 @@ border-color:#006648;
   input#ebscohostsearchtext {
     margin-right:.25em;
   }
-    
+  
   .search-box-links {
     display:flex;
   }
@@ -747,7 +702,7 @@ border-color:#006648;
     content:'|';
     padding:.5em;
     text-decoration:none;
-   color: #929191;
+    color: #929191;
   }
 }
 
