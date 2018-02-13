@@ -512,6 +512,25 @@ input#ebscohostsearchtext {
  #subject-accordion .panel-body ul li {
     padding: 10px 0;
   }
+
+/* ===== FAQs ===== */
+
+#s-lg-box-18118830 {
+margin-bottom:0;
+}
+#s-la-widget-7593 {
+border:none;
+padding:0;
+margin: 20px 0;
+font-family:'Open Sans', Arial, sans-serif;
+}
+#s-la-content-search-query-7593 .input-group {
+    font-size: 1em;
+}
+#s-la-widget-7593 .btn-primary {
+ background-color: #006648!important; {
+border-color:#006648;
+}  
   
 /* === STAFF PAGE === */
 
