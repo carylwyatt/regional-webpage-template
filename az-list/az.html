@@ -1,6 +1,7 @@
 <!--
   A-Z list, alpha filter
-  5/24 -- added loading animation from http://tobiasahlin.com/spinkit/
+  5/24/17 -- added loading animation from http://tobiasahlin.com/spinkit/
+  11/14/18 -- fixed alphabetical issue; now displays in *actual* alphabetical order
   ====================================
     HTML #ID jump instead of jquery
     
@@ -251,7 +252,7 @@ select {
  var CIdatabases = _.filter(response.responseJSON, (['az_types[0].name', 'Central Indiana Region']));
 	
 	//sorts alphabetically
-var sorted = _.sortBy(CIdatabases, 'name');
+var sorted = _.orderBy(CIdatabases, [CIdatabase => CIdatabase.name.toLowerCase()], ['asc']);
  
  //and places each database in list
  var listHTML = '<ul>';
@@ -346,7 +347,7 @@ var CIdatabases;
         var CIdatabases = _.filter(response.responseJSON, {az_types: [{name: 'Central Indiana Region'}] } && {subjects: [{name: buttonText}] });
         }
         	//sorted alphabetically
-        var sorted = _.sortBy(CIdatabases, 'name');
+        var sorted = _.orderBy(CIdatabases, [CIdatabase => CIdatabase.name.toLowerCase()], ['asc']);
          //and placed in a list
         var listHTML = '<ul>';
          
